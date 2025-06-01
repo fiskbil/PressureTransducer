@@ -19,13 +19,13 @@ This Arduino library makes it easy to read pressure from common analog pressure 
     *   Open the Arduino IDE.
     *   Go to `Sketch` -> `Include Library` -> `Add .ZIP Library...`
     *   Navigate to the downloaded ZIP file and select it.
-
+<!---
 Alternatively, you can install it via the Arduino Library Manager:
 1.  Open the Arduino IDE.
 2.  Go to `Sketch` -> `Include Library` -> `Manage Libraries...`
-3.  Search for "PressureTransducer" (once published).
+3.  Search for "PressureTransducer".
 4.  Click "Install".
-
+--->
 ## Basic Usage
 
 Here's a simple example of how to use the library:
