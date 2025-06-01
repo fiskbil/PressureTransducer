@@ -1,0 +1,13 @@
+#######################################
+# Syntax Coloring Map For PressureTransducer
+#######################################
+
+PressureTransducer	KEYWORD1
+readRaw				KEYWORD2
+readVoltage			KEYWORD2
+readPressure		KEYWORD2
+setPressureRange	KEYWORD2
+setVoltageRange		KEYWORD2
+setADCReferenceVoltage	KEYWORD2
+setADCResolution	KEYWORD2
+begin				KEYWORD2
