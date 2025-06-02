@@ -11,6 +11,7 @@ This Arduino library makes it easy to read pressure from common analog pressure 
 *   Configurable ADC resolution (e.g., 10-bit, 12-bit).
 *   Handles out-of-range readings gracefully by returning `NAN`.
 *   Pre-calculates conversion factors for efficient readings.
+*   Configurable valid voltage threshold factor for robust out-of-range detection.
 
 ## Installation
 
@@ -84,13 +85,13 @@ void loop() {
 
 ## API Overview
 
-*   `PressureTransducer(pin, minPressure, maxPressure, minVoltage, maxVoltage, vRef, adcBits)`: Constructor.
+*   `PressureTransducer(pin, minPressure, maxPressure, minVoltage, maxVoltage, vRef, adcBits, validVoltageThresholdFactor)`: Constructor.
     *   `pin`: Analog pin.
     *   `minPressure`, `maxPressure`: Transducer's pressure range.
     *   `minVoltage`, `maxVoltage`: Transducer's voltage output range (optional, default to 0.5 - 4.5V).
     *   `vRef`: ADC reference voltage (optional, default to 5.0V).
     *   `adcBits`: ADC resolution in bits (optional, default to 10-bit).
-    *   `criticalVoltageThresholdFactor`: Factor for determining invalid readings (optional, default to 0.2f).
+    *   `validVoltageThresholdFactor`: Factor for determining invalid readings (optional, default to 0.2f).
 *   `begin()`: Initializes the sensor pin. Call in `setup()`.
 *   `readRaw()`: Returns the raw ADC value.
 *   `readVoltage()`: Returns the calculated voltage.

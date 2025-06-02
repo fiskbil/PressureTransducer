@@ -29,7 +29,7 @@ void loop() {
   Serial.print("\t Voltage: "); Serial.print(voltage, 3); Serial.print(" V");
   Serial.print("\t Pressure: ");
   if (isnan(pressure)) {
-    Serial.println("Invalid reading, sensor might be damaged or not connected.");
+    Serial.println("Invalid reading, sensor might be damaged.");
   } else {
     Serial.print(pressure, 2); Serial.println(" PSI");
   }
