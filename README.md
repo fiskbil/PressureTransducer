@@ -91,7 +91,7 @@ void loop() {
     *   `minVoltage`, `maxVoltage`: Transducer's voltage output range (optional, default to 0.5 - 4.5V).
     *   `vRef`: ADC reference voltage (optional, default to 5.0V).
     *   `adcBits`: ADC resolution in bits (optional, default to 10-bit).
-    *   `validVoltageThresholdFactor`: Factor for determining invalid readings (optional, default to 0.2f).
+    *   `validVoltageThresholdFactor`: Factor for determining invalid readings (optional, default to 0.5f).
 *   `begin()`: Initializes the sensor pin. Call in `setup()`.
 *   `readRaw()`: Returns the raw ADC value.
 *   `readVoltage()`: Returns the calculated voltage.

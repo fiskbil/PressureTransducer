@@ -10,17 +10,19 @@ public:
     static constexpr float DEFAULT_MAX_VOLTAGE = 4.5f;
     static constexpr float DEFAULT_VREF = 5.0f;
     static constexpr int   DEFAULT_ADC_BITS = 10;
-    static constexpr float DEFAULT_VALID_VOLTAGE_THRESHOLD_FACTOR = 0.2f;
+    static constexpr float DEFAULT_VALID_VOLTAGE_THRESHOLD_FACTOR = 0.5f;
 
-    // Constructor
-    // pin: Analog pin connected to the transducer.
-    // minVoltage: Voltage output by the transducer at minimum pressure (e.g., 0.5V).
-    // maxVoltage: Voltage output by the transducer at maximum pressure (e.g., 4.5V).
-    // minPressure: Minimum pressure the transducer can read (e.g., 0 PSI).
-    // maxPressure: Maximum pressure the transducer can read (e.g., 100 PSI).
-    // vRef: ADC reference voltage (default 5.0V for many Arduinos).
-    // adcBits: Number of ADC resolution bits (e.g., 10 for 10-bit ADC, results in 0-1023 range).
-    // validVoltageThresholdFactor: Factor to determine how far outside the calibrated voltage range a reading can be before it's considered invalid.
+    /**
+     * @brief Constructs a PressureTransducer object.
+     * @param pin Analog pin connected to the transducer.
+     * @param minPressure Minimum pressure the transducer can read (e.g., 0 PSI).
+     * @param maxPressure Maximum pressure the transducer can read (e.g., 100 PSI).
+     * @param minVoltage Voltage output by the transducer at minimum pressure (e.g., 0.5V).
+     * @param maxVoltage Voltage output by the transducer at maximum pressure (e.g., 4.5V).
+     * @param vRef ADC reference voltage (default 5.0V for many Arduinos).
+     * @param adcBits Number of ADC resolution bits (e.g., 10 for 10-bit ADC, results in 0-1023 range).
+     * @param validVoltageThresholdFactor Factor to determine how far outside the calibrated voltage range a reading can be before it's considered invalid.
+     */
     PressureTransducer(
         uint8_t pin,
         float minPressure,
