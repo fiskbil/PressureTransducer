@@ -31,6 +31,12 @@ Alternatively, you can install it via the Arduino Library Manager:
 
 Here's a simple example of how to use the library:
 
+**Wiring:**  
+Connect the pressure transducer as follows:
+- **V+** (sensor power, usually the red wire) to **5V** on the Arduino
+- **GND** (sensor ground, usually the black wire) to **GND** on the Arduino
+- **Signal** (sensor output) to an **analog input pin** (e.g., A0) on the Arduino
+
 ```cpp
 #include <PressureTransducer.h>
 
